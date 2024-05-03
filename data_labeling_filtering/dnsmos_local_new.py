@@ -144,7 +144,7 @@ def main(args):
     else:
         print(df.describe())
 
-def dnsmos_new(clips: list, personalized_MOS: bool, model_folder: str):
+def dnsmos_new(clips: list, personalized_MOS: bool, model_folder: str, metadata: list):
 
     p808_model_path = os.path.join(model_folder, 'DNSMOS', 'model_v8.onnx')
 
@@ -173,6 +173,8 @@ def dnsmos_new(clips: list, personalized_MOS: bool, model_folder: str):
     df = pd.DataFrame(rows)
 
     df = df.rename(columns={'filename': 'file'})
+    columns = ["file"] + metadata
+    df = df[columns]
     df.set_index("file", inplace = True)
     metadata = df.to_dict('index')
 
