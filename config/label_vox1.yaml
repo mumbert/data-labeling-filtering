@@ -23,7 +23,7 @@
  dnsmos:
    personalized_MOS: False
    model_folder: "DNS-Challenge/DNSMOS/"
-   metadata: ["OVRL_raw", "SIG_raw", "BAK_raw", "OVRL", "SIG", "BAK", "P808_MOS"]
+   metadata: ["OVRL", "SIG", "BAK"]
  output:
    basefolder: "output/labeling"
    json: true
