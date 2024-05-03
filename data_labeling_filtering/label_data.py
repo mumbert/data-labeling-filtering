@@ -103,10 +103,10 @@ class labelData():
         config = self.config["dnsmos"]
 
         metadata = dnsmos_new(clips = self.file_list, 
-                               personalized_MOS = config["personalized_MOS"],
-                               model_folder = config["model_folder"])
+                              personalized_MOS = config["personalized_MOS"],
+                              model_folder = config["model_folder"],
+                              metadata = config["metadata"])
         
-        print(metadata)
         self.update_output_metadata(new_metadata = metadata)
 
     def do_step(self, step) -> bool:
