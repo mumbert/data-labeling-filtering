@@ -102,10 +102,12 @@ class labelData():
 
         config = self.config["dnsmos"]
 
-        dnsmos_df = dnsmos_new(clips = self.file_list, 
-                               personalized_MOS=False,
-                               model_folder = "DNS-Challenge/DNSMOS/")
-        print(dnsmos_df)
+        metadata = dnsmos_new(clips = self.file_list, 
+                               personalized_MOS = config["personalized_MOS"],
+                               model_folder = config["model_folder"])
+        
+        print(metadata)
+        self.update_output_metadata(new_metadata = metadata)
 
     def do_step(self, step) -> bool:
 

@@ -160,19 +160,23 @@ def dnsmos_new(clips: list, personalized_MOS: bool, model_folder: str):
     desired_fs = SAMPLING_RATE
 
     with concurrent.futures.ThreadPoolExecutor() as executor:
-        future_to_url = {executor.submit(compute_score, clip, desired_fs, is_personalized_eval): clip for clip in clips}
+        future_to_url = {executor.submit(compute_score, str(clip), desired_fs, is_personalized_eval): str(clip) for clip in clips}
         for future in tqdm(concurrent.futures.as_completed(future_to_url)):
             clip = future_to_url[future]
             try:
                 data = future.result()
             except Exception as exc:
-                print('%r generated an exception: %s' % (clip, exc))
+                print('%r generated an exception: %s' % (str(clip), exc))
             else:
                 rows.append(data)            
 
     df = pd.DataFrame(rows)
 
-    return df
+    df = df.rename(columns={'filename': 'file'})
+    df.set_index("file", inplace = True)
+    metadata = df.to_dict('index')
+
+    return metadata
     # if csv_path:
     #     csv_path = csv_path
     #     df.to_csv(csv_path)
