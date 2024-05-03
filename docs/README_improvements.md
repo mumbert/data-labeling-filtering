@@ -13,11 +13,12 @@ In this section we can find a list of future improvements from different perspec
 
 Other metadata features can be included, such as:
 - speaker embeddings:
-  - by using the [resemblyzer](https://github.com/resemble-ai/Resemblyzer) project, demo 01 more concretely
+  - by using the [resemblyzer](https://github.com/resemble-ai/Resemblyzer) project, demo 01 shows some code easy to integrate
 - diarization: 
   - using the [pyannote](https://github.com/pyannote/pyannote-audio) project we can estimate when the different speakers are present in the speech signal,
   - by using this information the amount of different speakers can be estimated
 - Audio events (e.g. laughter, crowd cheers, music) along with their timestamps
+- Signal-to-noise ratio (SNR), for example using [wadaSNR](https://gist.github.com/johnmeade/d8d2c67b87cda95cd253f55c21387e75)
 
 ## Input
 
@@ -31,6 +32,7 @@ At this stage 2 different output formats are provided. JSON and CSV files have b
 
 Code can be improved from the following perspectives:
 - refactor: for instance, in the filtering class some functions share part of the code
+- filters: extend them to some of the current metadata (emotion dimensions, gender, age, dnsmos OVRL-SIG-BAK). It would be quite straightforward taking into account they would be very similar to what has already been implemented.
 
 ## Performance
 
