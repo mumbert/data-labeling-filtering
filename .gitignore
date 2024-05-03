@@ -1,0 +1,6 @@
+.DS_Store
+DNS-Challenge/
+cache/
+data/
+model/
+openvino_notebooks/
