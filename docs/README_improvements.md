@@ -3,10 +3,21 @@
 ## Description
 
 In this section we can find a list of future improvements from different perspectives:
+- metadata
 - input files
 - output files
 - code
 - performance
+
+## Metadata
+
+Other metadata features can be included, such as:
+- speaker embeddings:
+  - by using the [resemblyzer](https://github.com/resemble-ai/Resemblyzer) project, demo 01 more concretely
+- diarization: 
+  - using the [pyannote](https://github.com/pyannote/pyannote-audio) project we can estimate when the different speakers are present in the speech signal,
+  - by using this information the amount of different speakers can be estimated
+- Audio events (e.g. laughter, crowd cheers, music) along with their timestamps
 
 ## Input
 
