@@ -23,7 +23,10 @@ For each analyzed file of the dataset several metadata is extracted which can be
         "female": -0.8799999952316284,
         "male": 4.570000171661377,
         "child": -2.7699999809265137,
-        "gender": "male"
+        "gender": "male",
+        "OVRL": 3.0891271529377544,
+        "SIG": 3.6527983022435517,
+        "BAK": 3.5731412216384366
     },
 ```
 
