@@ -4,3 +4,4 @@ cache/
 data/
 model/
 openvino_notebooks/
+__pycache__
