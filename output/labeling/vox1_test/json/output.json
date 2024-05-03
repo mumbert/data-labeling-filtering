@@ -15,7 +15,10 @@
         "female": -0.8799999952316284,
         "male": 4.570000171661377,
         "child": -2.7699999809265137,
-        "gender": "male"
+        "gender": "male",
+        "OVRL": 3.0891271529377544,
+        "SIG": 3.6527983022435517,
+        "BAK": 3.5731412216384366
     },
     "data/vox1_test/wav/id10295/nt7dNRvlEHE/00004.wav": {
         "file": "data/vox1_test/wav/id10295/nt7dNRvlEHE/00004.wav",
@@ -33,7 +36,10 @@
         "female": -1.5099999904632568,
         "male": 5.949999809265137,
         "child": -3.1700000762939453,
-        "gender": "male"
+        "gender": "male",
+        "OVRL": 2.707923860643797,
+        "SIG": 3.5972475420002383,
+        "BAK": 2.856213375786228
     },
     "data/vox1_test/wav/id10295/nt7dNRvlEHE/00001.wav": {
         "file": "data/vox1_test/wav/id10295/nt7dNRvlEHE/00001.wav",
@@ -51,6 +57,9 @@
         "female": -1.4299999475479126,
         "male": 5.079999923706055,
         "child": -2.5899999141693115,
-        "gender": "male"
+        "gender": "male",
+        "OVRL": 3.1178247728337114,
+        "SIG": 3.631490088886974,
+        "BAK": 3.6311139917135757
     }
 }
