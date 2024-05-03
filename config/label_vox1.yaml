@@ -1,0 +1,30 @@
+---
+ general:
+   max_files: 3
+ steps: 
+   describe: true
+   format: true
+   transcribe: true
+   emotion: true
+   gender_age: true
+   dnsmos: true
+ dataset:
+   name: "vox1_test"
+   folder: "data/vox1_test/wav/"
+ format:
+   metadata: ["framerate", "nchannels", "sampwidth", "duration"]
+ transcribe:
+   metadata: ["text", "language"]
+   whisper_model: "base"
+ emotion:
+   metadata: ["arousal", "dominance", "valence"]
+ gender_age:
+   metadata: ["age", "female", "male", "child", "gender"]
+ dnsmos:
+   personalized_MOS: False
+   model_folder: "DNS-Challenge/DNSMOS/"
+   metadata: ["OVRL_raw", "SIG_raw", "BAK_raw", "OVRL", "SIG", "BAK", "P808_MOS"]
+ output:
+   basefolder: "output/labeling"
+   json: true
+   dataframe: true

@@ -1,0 +1,17 @@
+---
+ filters:
+   id: ["id102*"]
+   framerate: [16000]
+   nchannels: [1]
+   sampwidth: [2]
+   min_max_durations: [5.0, -1]
+   text: ["you", "looking"]
+   languages: ["en"]
+ dataset:
+   name: "vox1_test"
+ input:
+   file: "output/labeling/vox1_test/dataframe/output.csv"
+ output:
+   basefolder: "output/filtering"
+   json: true
+   dataframe: true
